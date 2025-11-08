@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Battery Monitor 🔋 - Download & Documentary</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
+    header {
+        background-color: #2c3e50;
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+    main {
+        max-width: 800px;
+        margin: 30px auto;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    h1, h2, h3 {
+        color: #2c3e50;
+    }
+    .download-btn {
+        display: inline-block;
+        background-color: #27ae60;
+        color: white;
+        padding: 12px 24px;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 5px;
+        margin: 20px 0;
+        transition: 0.3s;
+    }
+    .download-btn:hover {
+        background-color: #2ecc71;
+    }
+    img.screenshot {
+        max-width: 100%;
+        margin: 10px 0;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+    }
+    footer {
+        text-align: center;
+        padding: 20px;
+        color: #666;
+        font-size: 0.9em;
+    }
+    .section {
+        margin-bottom: 30px;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Battery Monitor 🔋</h1>
+    <p>Real-time battery monitor & logger for Windows/Linux/macOS</p>
+</header>
+
+<main>
+    <div class="section">
+        <h2>Download</h2>
+        <p>Get the latest version of the Battery Monitor executable:</p>
+        <a class="download-btn" href="BatteryMonitor.exe" download>Download .exe</a>
+        <p>File size: ~30 MB (single-file executable with Python runtime)</p>
+    </div>
+
+    <div class="section">
+        <h2>Features</h2>
+        <ul>
+            <li>Displays real battery percentage</li>
+            <li>Shows charging/discharging status</li>
+            <li>Tracks PC uptime & app runtime</li>
+            <li>Visual battery bar with colors & ⚡ icon</li>
+            <li>Logs battery & power info every 30 seconds</li>
+            <li>Cross-platform: Windows, Linux, macOS</li>
+        </ul>
+        <img src="screenshot.png" alt="Battery Monitor Screenshot" class="screenshot">
+    </div>
+
+    <div class="section">
+        <h2>How it works</h2>
+        <p>The Battery Monitor app reads your system's battery using Python's <code>psutil</code> library. It displays a graphical battery bar, percentage, charging status, PC uptime, and app uptime. Every 30 seconds, it logs all information to <code>battery_log.txt</code> for history tracking.</p>
+        <p>On Linux, it attempts to read battery power in watts from <code>/sys/class/power_supply</code>. On Windows and macOS, wattage may be estimated if available.</p>
+    </div>
+
+    <div class="section">
+        <h2>Installation & Usage</h2>
+        <ol>
+            <li>Download the <code>BatteryMonitor.exe</code> file.</li>
+            <li>Double-click to run. No installation required.</li>
+            <li>The GUI will open showing battery status in real time.</li>
+            <li>Logs will be saved to <code>battery_log.txt</code> in the same folder as the executable.</li>
+        </ol>
+    </div>
+
+    <div class="section">
+        <h2>Notes</h2>
+        <ul>
+            <li>On Windows, no extra Python installation is needed (bundled in exe).</li>
+            <li>On Linux/macOS, Python 3 and psutil library must be installed if running the .py version.</li>
+            <li>Battery wattage may not be available on all systems.</li>
+        </ul>
+    </div>
+
+</main>
+
+<footer>
+    &copy; 2025 Bit Bender | Battery Monitor Project
+</footer>
+
+</body>
+</html>
